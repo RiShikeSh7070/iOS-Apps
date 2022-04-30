@@ -27,6 +27,7 @@ class ViewController: UIViewController{
 
 
 }
+//MARK: - CoinManagerDelegate
 
 extension ViewController: CoinManagerDelegate{
     //When the coinManager gets the price it will call this method and pass over the price and currency.
@@ -45,6 +46,8 @@ extension ViewController: CoinManagerDelegate{
         }
 }
 
+//MARK: - UIPickerViewDataSource
+
 extension ViewController: UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -55,6 +58,10 @@ extension ViewController: UIPickerViewDataSource{
     }
     
 }
+
+//MARK: - UIPickerViewDelegate
+
+
 extension ViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
